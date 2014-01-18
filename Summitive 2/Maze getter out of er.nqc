@@ -1,0 +1,40 @@
+#define Variable 0
+
+task main ()
+{
+while( Variable == 0 )
+
+{
+SetPower(OUT_A+OUT_C, 9);
+SetSensor(SENSOR_1,SENSOR_TOUCH);
+SetSensor(SENSOR_2,SENSOR_TOUCH);
+
+OnFwd(OUT_A+OUT_C);
+until (SENSOR_1 == 1);
+OnRev(OUT_A+OUT_C);
+Wait (20);
+Off(OUT_A+OUT_C);
+Wait (35);
+
+
+OnRev(OUT_A);
+OnFwd(OUT_C);
+Wait (67); //Waiting 67 at speed 9 gives a 90degree turn
+Off(OUT_A+OUT_C);
+Wait (35);
+
+OnRev(OUT_A+OUT_C);
+until (SENSOR_2 == 1);
+OnFwd(OUT_A+OUT_C);
+Wait (20);
+Off(OUT_A+OUT_C);
+Wait (35);
+
+OnRev(OUT_A);
+OnFwd(OUT_C);
+Wait (67); //Waiting 67 at speed 9 gives a 90degree turn
+Off(OUT_A+OUT_C);
+Wait (35);
+
+}
+}

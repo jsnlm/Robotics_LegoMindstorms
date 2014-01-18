@@ -1,0 +1,35 @@
+int x    ;
+#define __NOTETIME   10
+#define __WAITTIME   12
+task main()
+{
+SetPower(OUT_A+OUT_C,7);
+SetSensor(SENSOR_3,SENSOR_TOUCH);
+
+
+
+OnFwd(OUT_A+OUT_C);
+ClearTimer(3);
+//  PlayTone(349,4*__NOTETIME);
+//  Wait(4*__WAITTIME);
+
+until ((SENSOR_3 == 1) || (Timer(3) >20));
+
+//  PlayTone(554,4*__NOTETIME);
+//  Wait(4*__WAITTIME);
+
+
+
+
+x = Timer(3);
+Off(OUT_A+OUT_C);
+Wait (50);
+ClearTimer(3);
+
+OnRev(OUT_A+OUT_C);
+until (Timer(3)> (x-1)   );
+
+
+Off(OUT_A+OUT_C);
+
+}

@@ -1,0 +1,20 @@
+#define __NOTETIME   10
+#define __WAITTIME   12
+
+  PlayTone(880,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(880,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(988,2*__NOTETIME);
+  Wait(2*__WAITTIME);
+  PlayTone(1175,2*__NOTETIME);
+  Wait(2*__WAITTIME);
+  PlayTone(1109,2*__NOTETIME);
+  Wait(2*__WAITTIME);
+  PlayTone(1318,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1480,2*__NOTETIME);
+  Wait(2*__WAITTIME);
+  PlayTone(1175,2*__NOTETIME);
+  Wait(2*__WAITTIME);
+

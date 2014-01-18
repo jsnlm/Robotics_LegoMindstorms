@@ -1,0 +1,52 @@
+ task main()
+ {
+ #define __NOTETIME   10
+#define __WAITTIME   12
+
+  PlayTone(784,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(784,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(784,2*__NOTETIME);
+  Wait(2*__WAITTIME);
+  PlayTone(784,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(784,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(784,2*__NOTETIME);
+  Wait(2*__WAITTIME);
+  PlayTone(784,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(784,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1046,2*__NOTETIME);
+  Wait(2*__WAITTIME);
+  PlayTone(1175,2*__NOTETIME);
+  Wait(2*__WAITTIME);
+  PlayTone(1318,2*__NOTETIME);
+  Wait(2*__WAITTIME);
+  PlayTone(784,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(784,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(784,2*__NOTETIME);
+  Wait(2*__WAITTIME);
+  PlayTone(784,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(784,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(784,2*__NOTETIME);
+  Wait(2*__WAITTIME);
+  PlayTone(784,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1318,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1175,2*__NOTETIME);
+  Wait(2*__WAITTIME);
+  PlayTone(988,2*__NOTETIME);
+  Wait(2*__WAITTIME);
+  PlayTone(784,2*__NOTETIME);
+  Wait(2*__WAITTIME);
+  PlayTone(784,2*__NOTETIME);
+  Wait(2*__WAITTIME);
+}

@@ -1,0 +1,14 @@
+
+task main()
+{
+SetSensor(SENSOR_2,SENSOR_LIGHT);
+OnFwd(OUT_A+OUT_C);
+
+if (SENSOR_2 == 40||41 );
+{
+Off(OUT_A+OUT_C);
+
+}
+}
+
+//http://people.cis.ksu.edu/~millermj/NQCTutor/Ctutorial.html

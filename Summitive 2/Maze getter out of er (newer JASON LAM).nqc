@@ -1,0 +1,41 @@
+#define x 0
+task main ()
+{
+while (1==1)
+{
+SetSensor(SENSOR_1,SENSOR_TOUCH);
+SetSensor(SENSOR_2,SENSOR_LIGHT);
+SetSensor(SENSOR_3,SENSOR_LIGHT);
+SetPower(OUT_A+OUT_C,3);
+
+
+OnFwd(OUT_A+OUT_C);
+while (x < 100)
+{
+x = x + 1;
+}
+until (SENSOR_1 == 1);
+
+Off(OUT_A+OUT_C);
+
+
+if (SENSOR_2 > SENSOR_3)
+{
+SetPower(OUT_A+OUT_C,9);
+OnFwd(OUT_C);
+OnRev(OUT_A);
+Wait (130);
+Off(OUT_A+OUT_C);
+}
+
+
+if (SENSOR_3 > SENSOR_2)
+{
+SetPower(OUT_A+OUT_C,9);
+OnFwd(OUT_A);
+OnRev(OUT_C);
+Wait (130);
+Off(OUT_A+OUT_C);
+}
+}
+}

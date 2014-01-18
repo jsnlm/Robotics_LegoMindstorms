@@ -1,0 +1,35 @@
+#define THRESHOLD 36
+task main()
+{
+SetPower(OUT_A+OUT_C,2);
+SetSensor(SENSOR_2,SENSOR_LIGHT);
+while(SENSOR_2 != THRESHOLD )
+{
+OnFwd(OUT_A+OUT_C);
+}
+Off (OUT_A+OUT_C);
+start song;
+}
+
+task song()
+{
+#define __NOTETIME   10
+#define __WAITTIME   12
+
+  PlayTone(262,4*__NOTETIME);
+  Wait(4*__WAITTIME);
+  PlayTone(294,4*__NOTETIME);
+  Wait(4*__WAITTIME);
+  PlayTone(330,4*__NOTETIME);
+  Wait(4*__WAITTIME);
+  PlayTone(349,4*__NOTETIME);
+  Wait(4*__WAITTIME);
+  PlayTone(392,4*__NOTETIME);
+  Wait(4*__WAITTIME);
+  PlayTone(440,4*__NOTETIME);
+  Wait(4*__WAITTIME);
+  PlayTone(494,4*__NOTETIME);
+  Wait(4*__WAITTIME);
+  PlayTone(523,4*__NOTETIME);
+  Wait(4*__WAITTIME);
+}

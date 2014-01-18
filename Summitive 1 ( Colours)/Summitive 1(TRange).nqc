@@ -1,0 +1,100 @@
+#define THRESHOLD1 32
+#define THRESHOLD2 33
+#define Centernumber 33
+#define RANGE 1
+
+task main()
+{
+
+SetSensor(SENSOR_2,SENSOR_LIGHT);
+SetPower(OUT_A+OUT_C,1);
+//while( (SENSOR_2 != (THRESHOLD1)) && (SENSOR_2 != (THRESHOLD2)) )
+while( (SENSOR_2 > (Centernumber+RANGE))||(SENSOR_2 < (Centernumber-RANGE))     )
+//        35          37            35        33
+{
+
+OnFwd(OUT_A+OUT_C);
+}
+Off (OUT_A+OUT_C);
+start song;
+}
+
+
+
+task song ()
+{
+#define __NOTETIME   10
+#define __WAITTIME   12
+
+  PlayTone(2637,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(2489,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(2349,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(2217,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(2349,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(2217,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(2093,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1975,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(2093,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1975,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1865,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1760,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1661,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1568,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1480,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1397,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1318,2*__NOTETIME);
+  Wait(2*__WAITTIME);
+  PlayTone(2349,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(2217,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(2349,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(2217,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(2093,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1975,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(2093,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1975,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1865,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1760,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1661,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1568,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1480,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1397,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1318,2*__NOTETIME);
+  Wait(2*__WAITTIME);
+  Wait(2*__WAITTIME);
+  Wait(2*__WAITTIME);
+  Wait(2*__WAITTIME);
+
+
+
+}
+

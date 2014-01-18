@@ -1,0 +1,103 @@
+/*
+April 29, 2010
+Jason Lam
+To be submitted to Ms. Wun
+Written by jason Lam
+Name of program: Maze Getter out of er
+purpose: Get out of a maze with no islands
+*/
+
+
+int x    ;
+int y = 0    ;
+int touch = 0 ;
+task main ()
+{
+
+SetSensor(SENSOR_3,SENSOR_TOUCH);
+SetSensor(SENSOR_1,SENSOR_LIGHT);
+
+OnFwd(OUT_A+OUT_C);
+until (SENSOR_3==1);
+OnFwd(OUT_C);
+OnRev(OUT_A);
+Wait (89);
+
+Off (OUT_A+OUT_C);
+
+Wait (50);
+OnFwd(OUT_A+OUT_C);
+Wait (70);
+
+while (y==0)
+{
+SetPower(OUT_A+OUT_C,7);
+OnFwd(OUT_A+OUT_C);
+
+if(SENSOR_3==1) //when touch sensor is touched, it turns left
+{
+SetPower(OUT_A+OUT_C,7);
+
+OnFwd(OUT_C);
+OnRev(OUT_A);
+Wait (89);
+
+Off (OUT_A+OUT_C);
+
+Wait (50);
+OnFwd(OUT_A+OUT_C);
+Wait (70);
+}
+
+//When light sensor is past a wall, it will turn right
+else if (SENSOR_1 <=35)
+{
+
+SetPower(OUT_A+OUT_C,7);
+OnFwd(OUT_A+OUT_C);
+ClearTimer(3);
+
+until ((SENSOR_3 == 1) || (Timer(3) >40));
+
+touch = SENSOR_3;
+x = Timer(3);
+Off(OUT_A+OUT_C);
+Wait (50);
+
+if (touch==0)
+ {
+
+ y += 1;
+
+}
+else if (touch==1)
+
+ClearTimer(3);
+
+OnRev(OUT_A+OUT_C);
+until (Timer(3)> (x-1)   );
+
+Off(OUT_A+OUT_C);
+Wait (50);
+
+
+{
+SetPower(OUT_A+OUT_C,2);
+OnFwd(OUT_A+OUT_C);
+
+Wait (70);
+SetPower(OUT_A+OUT_C,7);
+OnFwd(OUT_A);
+OnRev(OUT_C);
+Wait (86);
+Off(OUT_A+OUT_C);
+Wait (50) ;
+OnFwd(OUT_A+OUT_C);
+Wait (50);
+}
+
+}
+}
+ Off(OUT_A+OUT_C);
+}
+

@@ -1,0 +1,388 @@
+task main()
+{
+SetPower(OUT_A+OUT_C,5);
+repeat (1)
+{
+SetSensor(SENSOR_1,SENSOR_TOUCH);
+OnFwd(OUT_A+OUT_C);
+until (SENSOR_1 == 1);
+Off(OUT_A+OUT_C);
+SetSensor(SENSOR_1,SENSOR_TOUCH);
+OnRev(OUT_A+OUT_C);
+until (SENSOR_2 == 1);
+Off(OUT_A+OUT_C);
+OnFwd(OUT_A+OUT_C);
+Wait(170);
+Off(OUT_A+OUT_C);
+}
+start song;
+repeat(8)
+{
+OnFwd(OUT_A);
+OnRev(OUT_C);
+Wait (90) ;
+OnFwd(OUT_C);
+OnRev(OUT_A);
+Wait (90);
+}
+repeat(4)
+{
+OnFwd(OUT_A);
+OnRev(OUT_C);
+Wait (90) ;
+OnFwd(OUT_C);
+OnRev(OUT_A);
+Wait (90);
+Off(OUT_A+OUT_C);
+}
+}
+
+task song()
+{
+#define __NOTETIME   10
+#define __WAITTIME   12
+
+  PlayTone(2637,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(2489,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(2349,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(2217,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(2349,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(2217,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(2093,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1975,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(2093,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1975,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1865,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1760,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1661,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1568,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1480,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1397,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1318,2*__NOTETIME);
+  Wait(2*__WAITTIME);
+  PlayTone(2349,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(2217,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(2349,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(2217,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(2093,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1975,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(2093,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1975,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1865,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1760,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1661,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1568,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1480,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1397,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1318,2*__NOTETIME);
+  Wait(2*__WAITTIME);
+  Wait(2*__WAITTIME);
+  Wait(2*__WAITTIME);
+  Wait(2*__WAITTIME);
+
+
+  PlayTone(1318,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1244,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1175,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1109,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1046,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1397,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1318,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1244,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1318,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1244,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1175,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1109,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1046,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1109,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1175,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1244,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+
+  PlayTone(1318,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1244,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1175,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1109,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1046,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1397,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1318,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1244,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1318,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1244,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1175,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1109,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1046,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1109,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1175,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1244,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+
+
+
+  PlayTone(1318,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1244,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1175,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1109,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1175,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1109,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1046,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(988,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1046,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1109,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1175,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1244,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1318,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1397,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1318,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1244,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1318,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1244,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1175,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1109,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1175,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1109,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1046,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(988,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1046,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1109,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1175,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1244,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1318,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1480,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1568,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1661,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+
+
+
+  PlayTone(1760,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1661,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1568,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1480,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1397,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1865,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1760,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1661,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1760,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1661,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1568,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1480,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1397,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1480,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1568,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1661,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+
+
+  PlayTone(1760,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1661,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1568,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1480,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1397,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1865,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1760,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1661,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1760,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1661,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1568,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1480,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1397,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1480,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1568,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1661,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+
+
+
+  PlayTone(1760,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1661,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1568,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1480,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1568,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1480,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1397,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1318,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1397,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1480,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1568,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1661,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1760,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1865,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1760,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1661,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1760,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1661,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1568,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1480,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1568,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1480,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1397,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1318,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1397,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1480,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1568,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1661,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1760,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1865,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1760,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1661,1*__NOTETIME);
+  Wait(1*__WAITTIME);
+  PlayTone(1760,2*__NOTETIME);
+  Wait(2*__WAITTIME);
+
+
+}
+
+
